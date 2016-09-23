@@ -21,7 +21,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/app', express.static(path.resolve(__dirname, 'app')));
-app.use('/libs', express.static(path.resolve(__dirname, 'libs')));
+app.use('/', express.static(path.resolve(__dirname)));
+app.use('/node_modules', express.static(path.resolve(__dirname, 'node_modules')));
 
 
 app.post('/create-user', function(req, res, next){

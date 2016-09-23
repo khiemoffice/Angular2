@@ -25,23 +25,13 @@ gulp.task('build:server', function () {
 });
 
 //CLIENT
-var jsNPMDependencies = [
-    'core-js/client/shim.min.js',
-    'systemjs/dist/system.src.js',
-    'zone.js/dist/zone.js',
-    'reflect-metadata/Reflect.js'
-] 
 
 gulp.task('copyNpmDependenciesOnly', function() {
   gulp.src(gnf(), {base:'./'}).pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build:index', function(){
-    var mappedPaths = jsNPMDependencies.map(file => {return path.resolve('node_modules', file)}) 
-    
-    //Let's copy our head dependencies into a dist/libs
-    var copyJsNPMDependencies = gulp.src(mappedPaths, {base:'node_modules'})
-        .pipe(gulp.dest('dist/libs'))
+   
      
     //Let's copy our index into dist   
     var copyIndex = gulp.src('client/index.html')
@@ -49,24 +39,15 @@ gulp.task('build:index', function(){
     //copy systemjs into dist
     var copySystemJs = gulp.src('client/systemjs.config.js')
         .pipe(gulp.dest('dist'))
-    return [copyJsNPMDependencies, copyIndex, copySystemJs];
+    return [copyIndex, copySystemJs];
 });
 
 gulp.task('build:app', function(){
-    // var tsProject = ts.createProject('client/tsconfig.json');
-    // var tsResult = gulp.src('client/**/*.ts')
-	// 	.pipe(sourcemaps.init())
-    //     .pipe(ts(tsProject))
-	// return tsResult.js
-    //     .pipe(sourcemaps.write()) 
-	// 	.pipe(gulp.dest('dist'))
-
-
     return gulp
     .src('client/**/*.ts')
-    .pipe(sourcemaps.init())          // <--- sourcemaps
+    .pipe(sourcemaps.init())          
     .pipe(ts(tscConfig.compilerOptions))
-    .pipe(sourcemaps.write('.'))      // <--- sourcemaps
+    .pipe(sourcemaps.write('.'))      
     .pipe(gulp.dest('dist'));
 });
 

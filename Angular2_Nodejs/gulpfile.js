@@ -5,6 +5,7 @@ var runSequence = require('run-sequence');
 var del= require('del');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
+ var gnf = require('gulp-npm-files');
 
 const tscConfig = require('./client/tsconfig.json');
 
@@ -30,6 +31,10 @@ var jsNPMDependencies = [
     'zone.js/dist/zone.js',
     'reflect-metadata/Reflect.js'
 ] 
+
+gulp.task('copyNpmDependenciesOnly', function() {
+  gulp.src(gnf(), {base:'./'}).pipe(gulp.dest('./dist'));
+});
 
 gulp.task('build:index', function(){
     var mappedPaths = jsNPMDependencies.map(file => {return path.resolve('node_modules', file)}) 
@@ -68,6 +73,6 @@ gulp.task('build:app', function(){
 
 
 gulp.task('build', function(){
-	runSequence('clean','build:server','build:index','build:app');
+	runSequence('clean','build:server','build:index','build:app','copyNpmDependenciesOnly');
 })
 gulp.task('default',['build']);

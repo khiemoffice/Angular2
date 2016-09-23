@@ -11,7 +11,7 @@ var mongooseUrl='mongodb://root:123456@ds023438.mlab.com:23438/ecommerce_databas
 var port: number = process.env.PORT ||3000;
 var app = express();
 
-var User = require('../model/user'); 
+var User = require('./model/user'); 
 
 mongoose.connect(mongooseUrl,function(err){
     err&&console.log(err)||console.log('Connected to database')

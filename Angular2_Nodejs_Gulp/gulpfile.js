@@ -40,8 +40,12 @@ gulp.task('build:index', function(){
         .pipe(gulp.dest('dist'));
     //copy systemjs into dist
     var copySystemJs = gulp.src('client/systemjs.config.js')
-        .pipe(gulp.dest('dist'))
-    return [copyTemplate, copyIndex, copySystemJs];
+        .pipe(gulp.dest('dist'));
+    //copy user model into dist
+    var copyUserModel = gulp.src('model/**/*')
+        .pipe(gulp.dest('dist/model'));
+
+    return [copyTemplate, copyIndex, copySystemJs, copyUserModel];
 });
 
 gulp.task('build:app', function(){

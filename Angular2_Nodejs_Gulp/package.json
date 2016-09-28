@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ngulp":"gulp",
+    "ngulp": "gulp",
     "server": "node dist/server.js",
-    "start":"npm run ngulp && npm run server"
+    "start": "npm run ngulp && npm run server"
   },
   "author": "",
   "license": "ISC",
@@ -37,7 +37,9 @@
     "bootstrap": "^3.3.6",
     "core-js": "^2.4.1",
     "del": "^2.2.2",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
+    "gulp-typescript": "^3.0.1",
     "mongoose": "^4.6.1",
     "reflect-metadata": "^0.1.3",
     "run-sequence": "^1.2.2",

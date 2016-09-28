@@ -3,12 +3,9 @@ var router = express.Router();
 var User = require('../model/user');
 
 router.get('/', function(req, res, next) {
-    User.findOne({}, function(err, res){
-        if(err) return res.send('Error');
-        var email = res.name;
-    });
+  
     
-    res.render('node', {email:email});
+    res.render('index');
 });
 
 router.post('/', function(req, res, next){

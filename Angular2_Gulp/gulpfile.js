@@ -10,11 +10,11 @@ const tscConfig = require('./tsconfig.json');
 
 // clean the contents of the distribution directory
 gulp.task('clean', function () {
-  return del('dist/**/*');
+  return del('dist');
 });
 
 // TypeScript compile
-gulp.task('compile', ['clean'], function () {
+gulp.task('compile', ['clean','copyNpmDependenciesOnly'], function () {
   return gulp
     .src(['app/**/*.ts', 'typings/**/*.d.ts'])
     .pipe(sourcemaps.init()) 
@@ -48,5 +48,5 @@ gulp.task('serve', function() {
 });
 
 
-gulp.task('build', ['compile','copy:libs','copy:assets','copyNpmDependenciesOnly','serve']);
+gulp.task('build', ['compile','copy:libs','copy:assets','serve']);
 gulp.task('default', ['build']);

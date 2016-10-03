@@ -1,20 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "dist/app",
-    "target": "ES5",
-    "module": "system",
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "removeComments": false,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "noImplicitAny": false
   },
   "exclude": [
     "node_modules",
-    "dist",
-    "typings/globals",
-     "typings/index.d.ts"
+    "dist"
   ]
 }

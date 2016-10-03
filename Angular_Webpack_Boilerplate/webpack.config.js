@@ -22,6 +22,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"./dist/vendor.bundle.js")
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"./dist/vendor.bundle.js"),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {screw_ie8: true}
+    })
   ]
 }

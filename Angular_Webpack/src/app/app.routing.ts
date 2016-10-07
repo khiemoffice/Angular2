@@ -5,8 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'contact', pathMatch:'full'},
-  { path: 'form', loadChildren: 'form/form.module#FormModule' },
-  { path: 'heroes', loadChildren: 'http/http.module#HeroModule' }
+  { path: 'form', loadChildren: 'form/form.module#FormModule' }
+  
 ];
 
 

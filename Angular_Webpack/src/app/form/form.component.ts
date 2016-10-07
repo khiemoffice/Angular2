@@ -5,7 +5,10 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './feature.component.html'
 })
 export class FormComponent {
-    constructor() { }
+    birthday = Date.now();
+    get format(){
+        return "MM/dd/yy";
+    }
 
    
 }

@@ -9,9 +9,11 @@ import {UserService } from './user.service';
 import{ ContactModule }      from './contact/contact.module';
 import{ FormModule }      from './form/form.module';
 import { routings }            from './app.routing';
+/* Http Imports */
+import { HttpModule } from './http/http.module';
 
 @NgModule({
-    imports:        [BrowserModule, ContactModule, FormModule, routings],
+    imports:        [BrowserModule, ContactModule, FormModule, HttpModule, routings],
     declarations:   [AppComponent],
     bootstrap:      [AppComponent],
     providers:      [UserService]

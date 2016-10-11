@@ -1,1 +1,14 @@
-dasy la form compoent
+<input type="text" #box placeholder='hero name' (keyup.enter)="addHero(box.value); box.value=''">
+
+<h1> day la tat ca hero</h1>
+<div *ngFor="let hero of heroes">
+    {{hero.name}} AND  {{hero.canFly}}
+  </div>
+
+<h1>dan chi la canfly </h1>
+  <div *ngFor="let hero of (heroes | canFlyHero)">
+    {{heroes | canFlyHero | json }}
+  
+  
+  </div>
+  

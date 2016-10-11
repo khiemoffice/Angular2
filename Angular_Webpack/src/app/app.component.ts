@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
      <nav>
         <a routerLink="contact" routerLinkActive="active">Contact</a>
         <a routerLink="form"  routerLinkActive="active">Form</a>
-        <a routerLink="heroes"  routerLinkActive="active">Heroes</a>
+        <a routerLink="http"  routerLinkActive="active">Http</a>
       </nav>
       <router-outlet></router-outlet>
     <img src="../../public/images/angular.png">

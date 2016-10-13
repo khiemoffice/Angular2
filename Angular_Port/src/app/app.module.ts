@@ -19,6 +19,9 @@ import { NAV_DROPDOWN_DIRECTIVES } from './shared/nav-dropdown.directive';
 // Charts
 import { ChartsComponent }              from './charts/charts.component';
 
+// Material Design
+import { MaterialModule } from '@angular/material';
+
 import { routing } from './app.routings';
 
 @NgModule({
@@ -39,7 +42,8 @@ import { routing } from './app.routings';
     RouterModule,
     Ng2BootstrapModule ,
     ChartsModule,
-    routing
+    routing,
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

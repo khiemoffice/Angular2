@@ -1,3 +1,174 @@
-<p>
-  dashboard works!
-</p>
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-xs-6 col-lg-3">
+            <div class="card">
+                <div class="card-block p-a-1 clearfix">
+                    <i class="fa fa-cogs bg-primary p-a-1 font-2xl m-r-1 pull-left"></i>
+                    <div class="text-uppercase text-muted font-weight-bold font-xs text-xs-right m-b-0 m-t-h">Clients</div>
+                    <div class="h5 text-xs-right">4.589</div>
+                </div>
+                <div class="card-footer p-x-1 p-y-h">
+                    <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right pull-right font-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-xs-6 col-lg-3">
+            <div class="card">
+                <div class="card-block p-a-1 clearfix">
+                    <i class="fa fa-laptop bg-info p-a-1 font-2xl m-r-1 pull-left"></i>
+                    <div class="text-uppercase text-muted font-weight-bold font-xs text-xs-right m-b-0 m-t-h">Deals</div>
+                    <div class="h5 text-xs-right">789</div>
+                </div>
+                <div class="card-footer p-x-1 p-y-h">
+                    <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right pull-right font-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-xs-6 col-lg-3">
+            <div class="card">
+                <div class="card-block p-a-1 clearfix">
+                    <i class="fa fa-moon-o bg-warning p-a-1 font-2xl m-r-1 pull-left"></i>
+                    <div class="text-uppercase text-muted font-weight-bold font-xs text-xs-right m-b-0 m-t-h">Income</div>
+                    <div class="h5 text-xs-right">$1.999</div>
+                </div>
+                <div class="card-footer p-x-1 p-y-h">
+                    <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right pull-right font-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+
+        <div class="col-xs-6 col-lg-3">
+            <div class="card">
+                <div class="card-block p-a-1 clearfix">
+                    <i class="fa fa-bell bg-danger p-a-1 font-2xl m-r-1 pull-left"></i>
+                    <div class="text-uppercase text-muted font-weight-bold font-xs text-xs-right m-b-0 m-t-h">Account</div>
+                    <div class="h5 text-xs-right">$100K</div>
+                </div>
+                <div class="card-footer p-x-1 p-y-h">
+                    <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right pull-right font-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+    </div>
+    <!--/.row-->
+    <div class="card">
+        <div class="card-header">
+            Traffic
+        </div>
+        <div class="card-block">
+            <div class="chart-wrapper" style="height:300px;margin-top:40px;">
+                <canvas baseChart  class="chart" [datasets]="mainChartData" [labels]="mainChartLabels" [options]="mainChartOptions" [colors]="mainChartColours" [legend]="mainChartLegend" [chartType]="mainChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                style="height:300px;"></canvas>
+            </div>
+        </div>
+        <div class="card-footer p-a-0">
+            <ul>
+                <li class="b-r-1 p-y-2">
+                    <strong>17.781</strong>
+                    <br>Pageviews</li>
+                <li class="b-r-1 p-y-2">
+                    <strong>9.879</strong>
+                    <br>Unique Users</li>
+                <li class="b-r-1 p-y-2">
+                    <strong>00:02:58</strong>
+                    <br>Avg. Visit Duration</li>
+                <li class="p-y-2">
+                    <strong>59,83%</strong>
+                    <br>Bounce Rate</li>
+            </ul>
+        </div>
+    </div>
+    <!--/.card-->
+    <div class="row">
+        <div class="col-sm-6 col-lg-3">
+            <div class="social-box facebook">
+                <i class="fa fa-facebook"></i>
+                <div class="chart-wrapper">
+                    <canvas baseChart  class="chart" [datasets]="socialChartData1" [labels]="socialChartLabels" [options]="socialChartOptions" [colors]="socialChartColours" [legend]="socialChartLegend" [chartType]="socialChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                    style="height:90px;"></canvas>
+                </div>
+                <ul>
+                    <li>
+                        <strong>89k</strong>
+                        <span>friends</span>
+                    </li>
+                    <li>
+                        <strong>459</strong>
+                        <span>feeds</span>
+                    </li>
+                </ul>
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
+        <div class="col-sm-6 col-lg-3">
+            <div class="social-box twitter">
+                <i class="fa fa-twitter"></i>
+                <div class="chart-wrapper">
+                    <canvas baseChart  class="chart" [datasets]="socialChartData2" [labels]="socialChartLabels" [options]="socialChartOptions" [colors]="socialChartColours" [legend]="socialChartLegend" [chartType]="socialChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                    style="height:90px;"></canvas>
+                </div>
+                <ul>
+                    <li>
+                        <strong>973k</strong>
+                        <span>followers</span>
+                    </li>
+                    <li>
+                        <strong>1.792</strong>
+                        <span>tweets</span>
+                    </li>
+                </ul>
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
+        <div class="col-sm-6 col-lg-3">
+            <div class="social-box linkedin">
+                <i class="fa fa-linkedin"></i>
+                <div class="chart-wrapper">
+                    <canvas baseChart  class="chart" [datasets]="socialChartData3" [labels]="socialChartLabels" [options]="socialChartOptions" [colors]="socialChartColours" [legend]="socialChartLegend" [chartType]="socialChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                    style="height:90px;"></canvas>>
+                </div>
+                <ul>
+                    <li>
+                        <strong>500+</strong>
+                        <span>contacts</span>
+                    </li>
+                    <li>
+                        <strong>292</strong>
+                        <span>feeds</span>
+                    </li>
+                </ul>
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
+        <div class="col-sm-6 col-lg-3">
+            <div class="social-box google-plus">
+                <i class="fa fa-google-plus"></i>
+                <div class="chart-wrapper">
+                    <canvas baseChart  class="chart" [datasets]="socialChartData4" [labels]="socialChartLabels" [options]="socialChartOptions" [colors]="socialChartColours" [legend]="socialChartLegend" [chartType]="socialChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                    style="height:90px;"></canvas>
+                </div>
+                <ul>
+                    <li>
+                        <strong>894</strong>
+                        <span>followers</span>
+                    </li>
+                    <li>
+                        <strong>92</strong>
+                        <span>circles</span>
+                    </li>
+                </ul>
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
+    </div>
+</div>

@@ -5,8 +5,19 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
+import { ChartsModule }                 from 'ng2-charts/ng2-charts';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FullLayoutComponent } from './layouts/full-layout.component';
+
+import { ButtonsComponent }         from './components/buttons.component';
+import { SidebarToggleDirective } from './shared/sidebar.directive';
+import { AsideToggleDirective } from './shared/aside.directive';
+import { NAV_DROPDOWN_DIRECTIVES } from './shared/nav-dropdown.directive';
+
+// Charts
+import { ChartsComponent }              from './charts/charts.component';
 
 import { routing } from './app.routings';
 
@@ -14,16 +25,24 @@ import { routing } from './app.routings';
   declarations: [
     AppComponent,
     DashboardComponent,
-    FullLayoutComponent
+    FullLayoutComponent,
+    SidebarToggleDirective,
+    AsideToggleDirective,
+    ChartsComponent,
+    ButtonsComponent,
+    NAV_DROPDOWN_DIRECTIVES
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule,
+    Ng2BootstrapModule ,
+    ChartsModule,
     routing
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

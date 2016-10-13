@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { HeroService  } from './hero.service';
 
 @Component({
@@ -25,4 +26,15 @@ export class HttpComponent implements OnInit {
                error =>  console.log(error)
          );
     }
+=======
+
+@Component({
+    selector: './http-component',
+    templateUrl: './http.component.html'
+})
+export class HttpComponent{
+    constructor() { }
+
+    ngOnInit() { }
+>>>>>>> 48729db09e984db8adb102c306e06a073f6231ad
 }

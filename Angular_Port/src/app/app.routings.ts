@@ -7,7 +7,8 @@ import { FullLayoutComponent }          from './layouts/full-layout.component';
 // Main view
 import { DashboardComponent }       from './dashboard/dashboard.component';
 
-
+//Components
+import { ButtonsComponent }         from './components/buttons.component';
 
 
 
@@ -23,7 +24,22 @@ const routes: Routes = [
            {
              path: 'dashboard',
              component: DashboardComponent,
-           }
+           },
+           {
+                path: 'components',
+                redirectTo: 'components/buttons',
+                pathMatch: 'full',
+            },
+            {
+                path: 'components',
+                children: [
+                    {
+                        path: 'buttons',
+                        component: ButtonsComponent
+                        
+                    }
+                ]
+            }
         ]
 
       }

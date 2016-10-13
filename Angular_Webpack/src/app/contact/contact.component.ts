@@ -1,5 +1,5 @@
 import { Component, OnInit }      from '@angular/core';
-import { Contact, ContactService } from './contact.service';
+import { TODO, ContactService } from './contact.service';
 import { UserService }    from '../user.service';
 
 @Component({
@@ -9,34 +9,25 @@ import { UserService }    from '../user.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  contact:  Contact;
-  contacts: Contact[];
+  todo: TODO;
+  TODOs: TODO[];
   msg = 'Loading contacts ...';
   userName = '';
-  constructor(private contactService: ContactService, userService: UserService) {
-    this.userName = userService.userName;
+
+  constructor(private contactService: ContactService, private  userService: UserService) {
+    
   }
+  
+ 
   ngOnInit() {
-    this.contactService.getContacts().then(contacts => {
-      this.msg = '';
-      this.contacts = contacts;
-      this.contact = contacts[0];
-    });
+     this.contactService.getContacts()
+      .map(res=>res.json())
+      .subscribe(
+        alo => {console.log(alo)},
+        err => console.log(err)
+      );
   }
-  next() {
-    let ix = 1 + this.contacts.indexOf(this.contact);
-    if (ix >= this.contacts.length) { ix = 0; }
-    this.contact = this.contacts[ix];
-  }
-  onSubmit() {
-    // POST-DEMO TODO: do something like save it
-    this.displayMessage('Saved ' + this.contact.name);
-  }
-  newContact() {
-    this.displayMessage('New contact');
-    this.contact = {id: 42, name: ''};
-    this.contacts.push(this.contact);
-  }
+ 
   /** Display a message briefly, then remove it. */
   displayMessage(msg: string) {
     this.msg = msg;

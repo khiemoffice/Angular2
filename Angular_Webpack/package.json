@@ -6,6 +6,7 @@
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "server" :"node dist/server",
     "postinstall": "typings install"
   },
   "license": "MIT",
@@ -30,8 +31,13 @@
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
     "awesome-typescript-loader": "^2.2.4",
+<<<<<<< HEAD
+=======
+    "body-parser": "^1.15.2",
+>>>>>>> 48729db09e984db8adb102c306e06a073f6231ad
     "concurrently": "^3.0.0",
     "css-loader": "^0.23.1",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
@@ -43,6 +49,10 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
     "lite-server": "^2.2.2",
+<<<<<<< HEAD
+=======
+    "mongoose": "^4.6.3",
+>>>>>>> 48729db09e984db8adb102c306e06a073f6231ad
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",
     "raw-loader": "^0.5.1",
@@ -52,6 +62,10 @@
     "typings": "^1.4.0",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
+<<<<<<< HEAD
     "webpack-merge": "^0.14.1"
+=======
+    "webpack-merge": "^0.14.0"
+>>>>>>> 48729db09e984db8adb102c306e06a073f6231ad
   }
 }

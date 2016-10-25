@@ -7,15 +7,14 @@ import { FullLayoutComponent }          from './layouts/full-layout.component';
 // Main view
 import { DashboardComponent }       from './dashboard/dashboard.component';
 
-//Components
+// Components
 import { ButtonsComponent }         from './components/buttons.component';
 
-
+import { LoginComponent } from './login/index';
 
 const routes: Routes = [
       { path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full'
+        component: LoginComponent
       },
       {
         path: '',

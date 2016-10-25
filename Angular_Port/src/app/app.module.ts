@@ -16,11 +16,14 @@ import { SidebarToggleDirective } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { NAV_DROPDOWN_DIRECTIVES } from './shared/nav-dropdown.directive';
 
+
+
+import { LoginComponent } from './login/login.component';
+
 // Charts
 import { ChartsComponent }              from './charts/charts.component';
 
 // Material Design
-import { MaterialModule } from '@angular/material';
 
 import { routing } from './app.routings';
 
@@ -33,7 +36,8 @@ import { routing } from './app.routings';
     AsideToggleDirective,
     ChartsComponent,
     ButtonsComponent,
-    NAV_DROPDOWN_DIRECTIVES
+    NAV_DROPDOWN_DIRECTIVES,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +46,7 @@ import { routing } from './app.routings';
     RouterModule,
     Ng2BootstrapModule ,
     ChartsModule,
-    routing,
-    MaterialModule.forRoot()
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

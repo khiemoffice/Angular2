@@ -8,13 +8,14 @@ import { AppComponent } from './app.component';
 import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
 import { ChartsModule }                 from 'ng2-charts/ng2-charts';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { FullLayoutComponent } from './layouts/full-layout.component';
+import { DashboardComponent }           from './dashboard/dashboard.component';
+import { FullLayoutComponent }          from './layouts/full-layout.component';
 
-import { ButtonsComponent }         from './components/buttons.component';
-import { SidebarToggleDirective } from './shared/sidebar.directive';
-import { AsideToggleDirective } from './shared/aside.directive';
-import { NAV_DROPDOWN_DIRECTIVES } from './shared/nav-dropdown.directive';
+import { ButtonsComponent }             from './components/buttons.component';
+import { SidebarToggleDirective }       from './shared/sidebar.directive';
+import { SidebarToggleClickDirective }  from './shared/sidebar.clicktoggle.directive';
+import { AsideToggleDirective }         from './shared/aside.directive';
+import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
 
 
 
@@ -33,6 +34,7 @@ import { routing } from './app.routings';
     DashboardComponent,
     FullLayoutComponent,
     SidebarToggleDirective,
+    SidebarToggleClickDirective,
     AsideToggleDirective,
     ChartsComponent,
     ButtonsComponent,
@@ -48,7 +50,7 @@ import { routing } from './app.routings';
     ChartsModule,
     routing
   ],
-  providers: [SidebarToggleDirective],
+  providers: [SidebarToggleDirective, SidebarToggleClickDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

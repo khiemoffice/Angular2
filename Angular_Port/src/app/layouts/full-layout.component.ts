@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }                       from '@angular/router';
-import  { SidebarToggleDirective }      from '../shared/sidebar.directive';
+import { SidebarToggleDirective }      from '../shared/sidebar.directive';
+import { SidebarToggleClickDirective } from '../shared/sidebar.clicktoggle.directive';
 
 
 @Component({
@@ -22,6 +23,10 @@ export class FullLayoutComponent{
     }
 
     ngAfterViewInit(): void {
-      this.sidebar_toggle.toggleOpen();
+      var _this=this;
+      setTimeout(function(){
+          _this.sidebar_toggle.toggleOpen();
+      },1000)
+      
     }
 }

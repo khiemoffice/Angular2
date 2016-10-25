@@ -6,12 +6,12 @@ import { Directive, HostListener } from '@angular/core';
 export class SidebarToggleDirective {
 
     // Check if element has class
-    private hasClass(target:any, elementClassName:string) {
+     hasClass(target:any, elementClassName:string) {
         return new RegExp('(\\s|^)' + elementClassName + '(\\s|$)').test(target.className);
     }
 
     // Toggle element class
-    private toggleClass(elem:any, elementClassName:string) {
+     toggleClass(elem:any, elementClassName:string) {
         let newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
         if (this.hasClass(elem, elementClassName)) {
             while (newClass.indexOf(' ' + elementClassName + ' ') >= 0 ) {
@@ -36,3 +36,5 @@ export class SidebarToggleDirective {
 
     }
 }
+
+

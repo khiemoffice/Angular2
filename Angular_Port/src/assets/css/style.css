@@ -2585,7 +2585,7 @@ input[type="button"].btn-block {
   left: 0;
   z-index: 1030; }
 
-.navbar-fixed-top, body.navbar-fixed header.navbar {
+.navbar-fixed-top, header.navbar {
   top: 0; margin-left:60px; }
 
 .navbar-fixed-bottom {
@@ -8236,7 +8236,7 @@ body:not(.top-nav) .sidebar {
         body:not(.top-nav) .sidebar ul.nav li.nav-item a.nav-link i {
           width: 20px;
           margin: 0 0.5rem 0 0;
-          font-size: 14px;
+          font-size: 16px;
           color: #9fabb8;
           text-align: center; }
         body:not(.top-nav) .sidebar ul.nav li.nav-item a.nav-link .tag {
@@ -10658,7 +10658,7 @@ base-chart.chart {
     position: fixed !important;
     top: 0 !important;
     right: 0 !important;
-    left: 0 !important; }
+    left: 0 !important; margin-left: 0px;}
     header.navbar .navbar-toggler {
       position: absolute;
       top: 0;
@@ -10862,7 +10862,7 @@ base-chart.chart {
     border: 0; }
   .navbar .form-inline .form-control, .navbar .form-inline .daterangepicker .input-mini, .daterangepicker .navbar .form-inline .input-mini, .navbar .form-inline .input-group > .ui-select-bootstrap > input.ui-select-search.form-control {
     float: none !important;
-    color: #dbdee0;
+    color: #313541;
     vertical-align: top;
     background-color: #f1f3f8;
     border: 0; }
@@ -10881,6 +10881,7 @@ base-chart.chart {
     background-color: #f1f3f8; }
     .navbar .form-inline .input-group-btn .btn.dropdown-toggle, .navbar .form-inline .input-group-btn .fc button.dropdown-toggle, .fc .navbar .form-inline .input-group-btn button.dropdown-toggle {
       background-color: #9fabb8; }
+      .navbar .form-inline .input-group-btn .btn i{color: #313541;}
 
 .navbar .avatar img {
   width: 30px;
@@ -10924,4 +10925,29 @@ body:not(.top-nav) .sidebar ul.nav li.nav-item a.nav-link i {
     line-height: 35px;
     background: #36a9e1;
     border:none; color:#FFF; font-size: 17px; outline: none
+}
+
+.loading {
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    z-index: -1;
+}
+app-root:empty + .loading {
+    opacity: 1;
+    z-index: 100;
+}
+
+app-root:empty + .loading h1 {
+    color: #EEE;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
 }

@@ -5,22 +5,12 @@
 
 		<ul class="nav navbar-nav hidden-md-down pull-xs-left">
 			<li class="nav-item">
-				<a class="nav-link navbar-toggler sidebar-toggle" href="#">&#9776;</a>
+				<a class="nav-link navbar-toggler sidebar-clicktoggle" href="#">&#9776;</a>
 			</li>
 		</ul>
 		<form class="form-inline pull-xs-left p-x-2 hidden-md-down">
 			<div class="input-group">
-				<div class="input-group-btn" dropdown>
-					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdownToggle>
-                        Search
-                    </button>
-					<div class="dropdown-menu" dropdownMenu>
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<a class="dropdown-item" href="#">Something else here</a>
-						<a class="dropdown-item" href="#">Separated link</a>
-					</div>
-				</div>
+				
 				<input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="....">
 				<span class="input-group-btn">
                     <button class="btn" type="button"><i class="fa fa-search"></i>
@@ -29,7 +19,7 @@
 			</div>
 		</form>
 		<ul class="nav navbar-nav pull-right hidden-md-down">
-			<li class="nav-item">
+			<li class="nav-item ">
 				<a class="nav-link" href="#"><i class="icon-bell"></i><span class="tag tag-pill tag-danger">5</span></a>
 			</li>
 			<li class="nav-item">
@@ -79,7 +69,7 @@
 	<nav class="sidebar-nav">
 		<ul class="nav">
 			<li class="nav-item">
-				<a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="icon-speedometer"></i> Dashboard <span class="tag tag-warning">NEW</span></a>
+				<a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="fa fa-align-right"></i> Dashboard <span class="tag tag-warning">NEW</span></a>
 			</li>
 
 			<li class="nav-item nav-dropdown" routerLinkActive="open">
@@ -120,7 +110,7 @@
 				<a class="nav-link" routerLinkActive="active" [routerLink]="['/widgets']"><i class="icon-calculator"></i> Widgets <span class="tag tag-info">NEW</span></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" routerLinkActive="active" [routerLink]="['/charts']"><i class="icon-pie-chart"></i> Charts</a>
+				<a class="nav-link" routerLinkActive="active" [routerLink]="['/charts']"><i class="fa fa-pie-chart"></i> Charts</a>
 			</li>
 			<li class="nav-item nav-dropdown">
 				<a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Pages</a>

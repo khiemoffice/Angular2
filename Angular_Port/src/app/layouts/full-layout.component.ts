@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }                       from '@angular/router';
-import { SidebarToggleDirective }      from '../shared/sidebar.directive';
-import { SidebarToggleClickDirective } from '../shared/sidebar.clicktoggle.directive';
+import { SidebarToggleDirective , SidebarToggleClickDirective}      from '../shared/sidebar.directive';
+
 
 
 @Component({

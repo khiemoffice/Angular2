@@ -12,8 +12,7 @@ import { DashboardComponent }           from './dashboard/dashboard.component';
 import { FullLayoutComponent }          from './layouts/full-layout.component';
 
 import { ButtonsComponent }             from './components/buttons.component';
-import { SidebarToggleDirective }       from './shared/sidebar.directive';
-import { SidebarToggleClickDirective }  from './shared/sidebar.clicktoggle.directive';
+import { SidebarToggleDirective, SidebarToggleClickDirective }       from './shared/sidebar.directive';
 import { AsideToggleDirective }         from './shared/aside.directive';
 import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
 

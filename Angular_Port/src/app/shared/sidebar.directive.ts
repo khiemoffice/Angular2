@@ -23,21 +23,16 @@ export class SidebarToggleDirective {
         }
     }
 
-    @HostListener('click', ['$event'])
-    toggleOpen($event:any) {
-        $event.preventDefault();
+    @HostListener('mouseover', ['$event'])
+    toggleOpen($event?:any) {
+        $event&&$event.preventDefault();
+        this.toggleClass(document.querySelector('body'), 'sidebar-nav');
+    }
 
-        let bodyClass = localStorage.getItem('body-class');
+    @HostListener('mouseout', ['$event'])
+    toggleClose($event?:any) {
+        $event&&$event.preventDefault();
+        this.toggleClass(document.querySelector('body'), 'sidebar-nav');
 
-        if (this.hasClass(document.querySelector('body'), 'sidebar-off-canvas')) {
-            this.toggleClass(document.querySelector('body'), 'sidebar-opened');
-            this.toggleClass(document.querySelector('html'), 'sidebar-opened');
-        } else if (this.hasClass(document.querySelector('body'), 'sidebar-nav') || bodyClass == 'sidebar-nav') {
-            this.toggleClass(document.querySelector('body'), 'sidebar-nav');
-            localStorage.setItem('body-class', 'sidebar-nav');
-            if (bodyClass == 'sidebar-nav') {
-                localStorage.clear();
-            }
-        }
     }
 }

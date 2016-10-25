@@ -48,8 +48,7 @@ import { routing } from './app.routings';
     ChartsModule,
     routing
   ],
-  providers: [],
+  providers: [SidebarToggleDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

@@ -1,7 +1,7 @@
 <header class="navbar">
 	<div class="container-fluid">
 		<button class="navbar-toggler hidden-lg-up" type="button">&#9776;</button>
-		<a class="navbar-brand" href="#"></a>
+
 
 		<ul class="nav navbar-nav hidden-md-down pull-xs-left">
 			<li class="nav-item">
@@ -74,11 +74,12 @@
 	</div>
 </header>
 
-<div class="sidebar">
+<div class="sidebar sidebar-toggle">
+			<a class="navbar-brand" href="#"></a>
 	<nav class="sidebar-nav">
 		<ul class="nav">
 			<li class="nav-item">
-				<a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="icon-speedometer"></i> Dashboard <span class="tag tag-info">NEW</span></a>
+				<a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="icon-speedometer"></i> Dashboard <span class="tag tag-warning">NEW</span></a>
 			</li>
 
 			<li class="nav-item nav-dropdown" routerLinkActive="open">

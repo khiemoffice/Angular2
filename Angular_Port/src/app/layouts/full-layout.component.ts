@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }                       from '@angular/router';
+import  { SidebarToggleDirective }      from '../shared/sidebar.directive';
+
 
 @Component({
   selector: 'app-full-layout',
   templateUrl: './full-layout.component.html',
   styleUrls: ['./full-layout.component.css']
 })
-export class FullLayoutComponent implements OnInit{
-    constructor( private router: Router ) { }
+export class FullLayoutComponent{
+    constructor( private router: Router, public sidebar_toggle:SidebarToggleDirective ) { }
 
     public status:{isopen:boolean} = {isopen: false};
-    
+
     public addToggleClass:boolean = false;
 
     public toggleDropdown($event:MouseEvent):void {
@@ -19,5 +21,7 @@ export class FullLayoutComponent implements OnInit{
         this.status.isopen = !this.status.isopen;
     }
 
-    ngOnInit(): void {}
+    ngAfterViewInit(): void {
+      this.sidebar_toggle.toggleOpen();
+    }
 }

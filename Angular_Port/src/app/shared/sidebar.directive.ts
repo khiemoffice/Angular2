@@ -47,7 +47,7 @@ export class SidebarToggleClickDirective{
     }
     @HostListener('click', ['$event'])
     toggleClickOpen($event?:any) {
-        return;
+        //return;
        $event&&$event.preventDefault();
         this._sidebartoggle.toggleClass(document.querySelector('body'), 'sidebar-nav');
     }

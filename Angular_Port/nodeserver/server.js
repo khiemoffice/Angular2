@@ -1,12 +1,23 @@
 var express = require('express'),
     path = require('path'),
-    fs = require('fs');
+    fs = require('fs'),
+    bodyParser = require('body-parser'),
+    router = express.Router();
+
 
 var app = express();
 var staticRoot = __dirname + '/';
 
 app.set('port', (process.env.PORT || 3000));
 
+//router
+var routes = require('./routers/index');
+router.use('/', router );
+
+
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static(staticRoot));
 
 app.use(function(req, res, next){
@@ -30,6 +41,8 @@ app.use(function(req, res, next){
 //app.all('/*', function(req, res, next) {
 //    res.sendFile('index.html', { root: __dirname + '/' });
 //});
+
+
 
 app.listen(app.get('port'), function() {
     console.log('app running on port', app.get('port'));

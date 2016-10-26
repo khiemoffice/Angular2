@@ -9,10 +9,11 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "build:nodeserver": "ng build && copy nodeserver\\* dist",
-    "build:nodeserver-prod": "ng build -prod && cp nodeserver\/* dist",
-    "serve-build" : "npm run build:nodeserver && cd dist && node server.js",
-    "serve-build-prod": "npm run build:nodeserver-prod && cd dist && node server.js"
+    "build:nodeserver": "ng build && xcopy nodeserver\\* dist /E",
+    "build:nodeserver-prod": "ng build -prod && cp nodeserver/* dist",
+    "serve-build": "npm run build:nodeserver && cd dist && node server.js",
+    "serve-build-prod": "npm run build:nodeserver-prod && cd dist && node server.js",
+    "server-only": "xcopy nodeserver\\* dist /E  && cd dist && node server.js"
   },
   "private": true,
   "dependencies": {
@@ -25,10 +26,12 @@
     "@angular/platform-browser": "~2.0.0",
     "@angular/platform-browser-dynamic": "~2.0.0",
     "@angular/router": "~3.0.0",
+    "body-parser": "^1.15.2",
     "chart.js": "^2.2.1",
     "core-js": "^2.4.1",
     "express": "^4.14.0",
     "moment": "^2.15.0",
+    "mongoose": "^4.6.5",
     "ng2-bootstrap": "^1.1.4",
     "ng2-charts": "^1.2.0",
     "rxjs": "5.0.0-beta.12",

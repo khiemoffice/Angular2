@@ -25,13 +25,15 @@ export class SidebarToggleDirective {
 
     @HostListener('mouseover', ['$event'])
     toggleOpen($event?:any) {
-        $event&&$event.preventDefault();
+        console.log('mouse over');
+        $event&&$event.preventDefault()&&$event.stopPropagation();
         this.toggleClass(document.querySelector('body'), 'sidebar-nav');
     }
 
     @HostListener('mouseout', ['$event'])
     toggleClose($event?:any) {
-        $event&&$event.preventDefault();
+        console.log('mouse out');
+        $event&&$event.preventDefault()&&$event.stopPropagation();
         this.toggleClass(document.querySelector('body'), 'sidebar-nav');
 
     }
@@ -42,12 +44,11 @@ export class SidebarToggleDirective {
 })
 export class SidebarToggleClickDirective{
     constructor(private _sidebartoggle: SidebarToggleDirective){
-   
     }
     @HostListener('click', ['$event'])
     toggleClickOpen($event?:any) {
+        return;
        $event&&$event.preventDefault();
-      
         this._sidebartoggle.toggleClass(document.querySelector('body'), 'sidebar-nav');
     }
 }

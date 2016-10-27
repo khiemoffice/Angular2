@@ -1,6 +1,6 @@
 <div class="login-page">
 	
-		<form  class="form-horizontal col-xs-10 col-sm-8 col-md-6 col-lg-4" (ngSubmit) ="onLogin( username.value, password.value)">
+		<form method="POST" action="/"  class="form-horizontal col-xs-10 col-sm-8 col-md-6 col-lg-4" (ngSubmit) ="onLogin(username.value, password.value)">
 			<div class="form-group">
 			    <label class="sr-only" for="username">Email address</label>
 			    <input type="text" class="form-control" id="username" placeholder="Username" #username >

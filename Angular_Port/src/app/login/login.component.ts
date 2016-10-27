@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-login',
@@ -14,11 +14,10 @@ export class LoginComponent {
   onLogin( username, password){
       //event.preventDefault();
       let body = JSON.stringify({ username, password });
-      const contentHeaders = new Headers();
-      contentHeaders.append('Accept', 'application/json');
-      contentHeaders.append('Content-Type', 'application/json');
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
 
-      this._http.post('/', body,{ headers: contentHeaders }).subscribe(
+      this._http.post('/', {username, password}, options).subscribe(
         res   => {this.router.navigate(['/dashboard']); },
         error => { alert(error.text())}
       )

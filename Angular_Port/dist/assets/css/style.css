@@ -8227,7 +8227,7 @@ body:not(.top-nav) .sidebar {
           body:not(.top-nav) .sidebar ul.nav li.nav-item a.nav-link:hover i {
             color: #FFF !important; }
         body:not(.top-nav) .sidebar ul.nav li.nav-item a.nav-link.active {
-          color: #34383c;
+          color: #36a9e1;
           background: #292e3b; }
           body:not(.top-nav) .sidebar ul.nav li.nav-item a.nav-link.active i {
             color: #36a9e1; }
@@ -8260,7 +8260,7 @@ body:not(.top-nav) .sidebar {
         body:not(.top-nav) .sidebar ul.nav li.nav-item.nav-dropdown.open > ul, body:not(.top-nav) .sidebar ul.nav li.nav-item.nav-dropdown.open > ol {
           display: inline; }
         body:not(.top-nav) .sidebar ul.nav li.nav-item.nav-dropdown.open a.nav-link {
-          color: #FFF;
+          color: #36a9e1;
           border-left: 0 !important; }
         body:not(.top-nav) .sidebar ul.nav li.nav-item.nav-dropdown.open > a.nav-link.nav-dropdown-toggle:before {
           -webkit-transform: rotate(-90deg);

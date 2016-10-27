@@ -1,12 +1,12 @@
 webpackJsonp([2,3],{
 
-/***/ 432:
+/***/ 426:
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(696);
+var content = __webpack_require__(690);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(765)(content, {});
@@ -27,22 +27,22 @@ if(false) {
 
 /***/ },
 
-/***/ 696:
+/***/ 690:
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(697)();
+exports = module.exports = __webpack_require__(691)();
 // imports
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n", ""]);
 
 // exports
 
 
 /***/ },
 
-/***/ 697:
+/***/ 691:
 /***/ function(module, exports) {
 
 /*
@@ -355,7 +355,7 @@ function updateLink(linkElement, obj) {
 /***/ 771:
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(432);
+module.exports = __webpack_require__(426);
 
 
 /***/ }

@@ -9,6 +9,7 @@ router.post('/', function(req,res,next){
             password: 'password'
     });
 
+    console.log(req)
     newUser.save(function(err) {
         if (err) throw err;
         console.log('User created!');

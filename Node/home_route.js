@@ -10,9 +10,10 @@ router.get('/', function(req, res) {
 })
 router.post('/', function(req, res) {
     //res.end(req.body.username);
-    var newUser = new User();
     var username = req.body.username;
     var password = req.body.password;
+    var newUser = new User({username, password });
+   
 
      newUser.save(function(err) {
             if (err)

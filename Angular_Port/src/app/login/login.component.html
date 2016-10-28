@@ -1,6 +1,6 @@
 <div class="login-page">
-	
-		<form method="POST" action="/"  class="form-horizontal col-xs-10 col-sm-8 col-md-6 col-lg-4" (ngSubmit) ="onLogin(username.value, password.value)">
+		<div class="col-xs-10 col-sm-8 col-md-6 col-lg-4">
+		<form method="POST" action="/"  class="form-horizontal" (ngSubmit) ="onLogin(username.value, password.value)">
 			<div class="form-group">
 			    <label class="sr-only" for="username">Email address</label>
 			    <input type="text" class="form-control" id="username" placeholder="Username" #username >
@@ -22,5 +22,11 @@
 				
 			</div>
 		</form>
-	
+
+		<a href="#">Forgot your password?</a>
+		<hr>
+		<form method="post" action=""><input type="hidden" name="next" value=""><input type="hidden" name="provider" value=""></form>
+		<div class="index--description--113WL">or sign in with one of these services</div>
+		<div class="index--buttons--1r2XL"><button type="button" class="" style="cursor: pointer;"><div class=""><img src="/images/facebook_logo-adc2f.svg"> Facebook </div></button><button type="button" class="" style="cursor: pointer;"><div ><img src="/images/google_logo-12018.svg"> Google </div></button><div class="index--description--113WL"></div></div>
+	</div>
 </div>

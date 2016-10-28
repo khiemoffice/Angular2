@@ -16,6 +16,8 @@ import { SidebarToggleDirective, SidebarToggleClickDirective }       from './sha
 import { AsideToggleDirective }         from './shared/aside.directive';
 import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
 
+import { TablesComponent }              from './components/tables.component';
+
 
 
 import { LoginComponent } from './login/login.component';
@@ -38,7 +40,8 @@ import { routing } from './app.routings';
     ChartsComponent,
     ButtonsComponent,
     NAV_DROPDOWN_DIRECTIVES,
-    LoginComponent
+    LoginComponent,
+    TablesComponent
   ],
   imports: [
     BrowserModule,

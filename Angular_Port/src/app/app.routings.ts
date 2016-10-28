@@ -9,6 +9,7 @@ import { DashboardComponent }       from './dashboard/dashboard.component';
 
 // Components
 import { ButtonsComponent }         from './components/buttons.component';
+import { TablesComponent }         from './components/tables.component';
 
 import { LoginComponent } from './login/index';
 
@@ -36,6 +37,13 @@ const routes: Routes = [
                         path: 'buttons',
                         component: ButtonsComponent
                         
+                    },
+                    {
+                        path: 'tables',
+                        component: TablesComponent,
+                        data: {
+                            title: 'Tables'
+                        }
                     }
                 ]
             }

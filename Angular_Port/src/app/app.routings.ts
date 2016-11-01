@@ -14,12 +14,6 @@ import { TablesComponent }         from './components/tables.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-      { path: '',
-        component: LoginComponent,
-        data:{
-          title: 'heorlo efwe'
-        }
-      },
       {
         path: '',
         component: FullLayoutComponent,

@@ -11,11 +11,14 @@ import { DashboardComponent }       from './dashboard/dashboard.component';
 import { ButtonsComponent }         from './components/buttons.component';
 import { TablesComponent }         from './components/tables.component';
 
-import { LoginComponent } from './login/index';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
       { path: '',
-        component: LoginComponent
+        component: LoginComponent,
+        data:{
+          title: 'heorlo efwe'
+        }
       },
       {
         path: '',
@@ -29,14 +32,13 @@ const routes: Routes = [
                 path: 'components',
                 redirectTo: 'components/buttons',
                 pathMatch: 'full',
-            },
-            {
+           },
+           {
                 path: 'components',
                 children: [
                     {
                         path: 'buttons',
-                        component: ButtonsComponent
-                        
+                        component: ButtonsComponent   
                     },
                     {
                         path: 'tables',

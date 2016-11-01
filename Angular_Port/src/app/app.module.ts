@@ -20,7 +20,7 @@ import { TablesComponent }              from './components/tables.component';
 
 
 
-import { LoginComponent } from './login/login.component';
+import { LoginModule } from './login/login.module';
 
 // Charts
 import { ChartsComponent }              from './charts/charts.component';
@@ -40,7 +40,6 @@ import { routing } from './app.routings';
     ChartsComponent,
     ButtonsComponent,
     NAV_DROPDOWN_DIRECTIVES,
-    LoginComponent,
     TablesComponent
   ],
   imports: [
@@ -50,6 +49,7 @@ import { routing } from './app.routings';
     RouterModule,
     Ng2BootstrapModule ,
     ChartsModule,
+    LoginModule,
     routing
   ],
   providers: [SidebarToggleDirective, SidebarToggleClickDirective],

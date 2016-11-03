@@ -8,20 +8,20 @@ var User     = require('./models/user');
 router.get('/', function(req, res) {
   res.sendfile(__dirname+'/index.html');
 })
-router.post('/', function(req, res) {
+router.post('/create-user', function(req, res) {
     //res.end(req.body.username);
-    var username = req.body.username;
-    var password = req.body.password;
-    var newUser = new User({username, password });
-   
+    var user= new User();
+    user.profile.name=req.body.name;
+    user.password = req.body.password;
+    user.email=req.body.email;
 
-     newUser.save(function(err) {
-            if (err)
-                res.send(err);
 
-            res.json({ message: 'User created!' });
+     user.save(function(err) {
+            if (err) res.send(err);
+
+            res.json('successfully save  new user');
         });
-    
+
 })
 // Car brands page
 router.get('/brands', function(req, res) {

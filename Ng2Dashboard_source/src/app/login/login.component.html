@@ -1,0 +1,35 @@
+<div class="login-page">
+		<div class="col-xs-10 col-sm-8 col-md-6 col-lg-4">
+		<form    class="form-horizontal" >
+			{{title}}
+			<div class="form-group">
+			    <label class="sr-only" for="username">Email address</label>
+			    <input type="text" class="form-control" id="username" placeholder="Username" #username >
+			  </div>
+			 <div class="form-group">
+			    <label class="sr-only" for="password">Password</label>
+			    <input type="password" class="form-control" id="password" placeholder="Password" #password>
+			  </div>
+			
+			<div class="form-group" style="margin-top:40px">
+				
+					<button type="submit" class="btn btn-default" (click)="onLogin()">Sign in</button>
+				
+			</div>
+			<div class="form-group">
+				
+					<div class="checkbox">
+						<label><input type="checkbox"> Remember me</label>
+					</div>
+					
+				
+			</div>
+		</form>
+
+		
+	
+		
+		
+			
+	</div>
+</div>

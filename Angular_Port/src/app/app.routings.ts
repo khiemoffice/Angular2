@@ -16,7 +16,7 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
       {
         path: '',
-        component: FullLayoutComponent,
+        loadChildren: './layouts/full-layout.component',
         children: [
            {
              path: 'dashboard',

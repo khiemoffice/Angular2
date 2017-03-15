@@ -12,15 +12,17 @@ export class LoginComponent {
   constructor(private router: Router, private _http: Http) { }
 
   onLogin( username, password){
-      //event.preventDefault();
+
+      this.router.navigate(['dashboard']);
+      return false;
+      /*
       let body = JSON.stringify({ username, password });
       let headers = new Headers({ 'Content-Type': 'application/json' });
       let options = new RequestOptions({ headers: headers });
-
       this._http.post('/', {username, password}, options).subscribe(
         res   => {this.router.navigate(['/dashboard']); },
         error => { alert(error.text())}
-      )
+      )*/
   }
 
 
